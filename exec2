@@ -4,10 +4,10 @@ def calculadora():
         operador = input("Digite a operação (+, -, *, /): ")
         numero2 = float(input("Digite o segundo número: "))
 
-        if operador == "-":
-            resultado = numero1 + numero2 # sinal de mais no lugar errado
-        elif operador == "=":
-            resultado = numero1 - numero2 # sinal de menos no lugar errado
+        if operador == "+":
+            resultado = numero1 + numero2
+        elif operador == "-":
+            resultado = numero1 - numero2
         elif operador == "*":
             resultado = numero1 * numero2
         elif operador == "/":
@@ -16,7 +16,7 @@ def calculadora():
             raise ValueError("Operação inválida.")
 
         print(f"Resultado: {resultado}")
-        
+
     except ValueError as erro:
         print(f"Erro: {erro}")
     except ZeroDivisionError:
